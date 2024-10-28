@@ -1,0 +1,125 @@
+To run this online shopping system project on your local machine, here’s a step-by-step guide based on the installation instructions provided:
+
+Prerequisites
+XAMPP or WAMPP: Make sure you have either XAMPP or WAMPP installed. This will provide the required Apache server and MySQL database.
+Installation Steps
+Start Apache and MySQL:
+
+Open the XAMPP/WAMPP control panel.
+Start the Apache and MySQL services.
+Clone or Download the Project:
+
+Download the project directly from GitHub:
+https://github.com/PuneethReddyHC/online-shopping-system-with-advanced-admin-page.git
+Alternatively, use Git to clone the project:
+bash
+Copy code
+cd C:\xampp\htdocs\
+git clone https://github.com/PuneethReddyHC/online-shopping-system-with-advanced-admin-page.git
+Set Up the Database:
+
+Open a web browser and go to http://localhost/phpmyadmin.
+In the sidebar, click New to create a new database.
+Name the database onlineshop and click Create.
+With the new database selected, click on Import in the top menu.
+Click Choose File, navigate to the project folder, and select onlineshop.sql from the database directory.
+Click Go to import the database structure and data.
+Access the Application:
+
+Open a browser and navigate to:
+perl
+Copy code
+http://localhost/online-shopping-system-with-advanced-admin-page-master
+Register as a new user to explore the system.
+Admin Login:
+
+Use the following credentials to access the admin panel:
+Email: admin@gmail.com or Username: admin
+Password: 123456789
+Screenshots
+The project includes screenshots to guide you on specific pages and features, which you can review to familiarize yourself with the user interface and admin functions.
+
+Additional Information
+For more customization or if you encounter issues, refer to the documentation in the GitHub repository. Let me know if you have any questions or need further assistance with this setup!
+
+
+Here are the prerequisites you'll need to run the online shopping system project:
+
+XAMPP or WAMP:
+
+Install either XAMPP or WAMP to set up a local server with Apache and MySQL.
+Download XAMPP or Download WAMP.
+Git (Optional, for cloning the repository):
+
+Install Git if you plan to clone the project from GitHub directly.
+Download Git.
+Web Browser:
+
+Use any modern web browser, such as Chrome, Firefox, or Edge, to access the local server interface.
+Basic PHP Knowledge (optional but helpful):
+
+Understanding PHP and MySQL basics can be useful, especially if you need to troubleshoot or customize the project.
+After ensuring these are installed, follow the setup instructions to run the project locally. Let me know if you need more details about any specific prerequisite.
+
+
+The "Not Found" error usually means that the server could not locate the project files in the expected directory. Let’s go through some checks to make sure everything is set up correctly:
+
+Verify the Directory Path:
+
+Ensure that the project folder online-shopping-system-with-advanced-admin-page-master is correctly placed in C:\xampp\htdocs\.
+The full path should look like this:
+sql
+Copy code
+C:\xampp\htdocs\online-shopping-system-with-advanced-admin-page-master
+Check the URL in Browser:
+
+Open your browser and try navigating to:
+perl
+Copy code
+http://localhost/online-shopping-system-with-advanced-admin-page-master
+Ensure there are no typos in the URL.
+Restart Apache:
+
+Go to the XAMPP Control Panel and restart the Apache server. Sometimes, a restart helps the server recognize newly added project files.
+Check Apache Configuration (if necessary):
+
+If the issue persists, it could be related to your Apache configuration.
+Open httpd.conf in C:\xampp\apache\conf\ and check that DocumentRoot is set to C:/xampp/htdocs.
+Ensure the <Directory "C:/xampp/htdocs"> directive allows access.
+Clear Browser Cache:
+
+Sometimes the browser caches errors. Clear your browser’s cache or try using an incognito window.
+Access the Directory Directly:
+
+Go to http://localhost/ and look for a directory listing. If you see online-shopping-system-with-advanced-admin-page-master, click on it to access the project.
+Let me know if any of these steps resolve the issue or if the problem persists, and we can troubleshoot further!
+
+Since your project directory is not in C:\xampp\htdocs, Apache cannot access it directly. To resolve this, you have two options:
+
+Option 1: Move the Project to XAMPP's htdocs Directory
+Copy or Move the online-shopping-system folder to C:\xampp\htdocs\.
+After moving, your project path should look like:
+makefile
+Copy code
+C:\xampp\htdocs\online-shopping-system
+Then, access the project in your browser at:
+perl
+Copy code
+http://localhost/online-shopping-system
+Option 2: Create an Alias in Apache (If you Prefer to Keep the Project in the Current Directory)
+Open httpd.conf in C:\xampp\apache\conf\ using a text editor.
+Add an alias for your project at the end of the file:
+apache
+Copy code
+Alias /online-shopping-system "C:/Users/pkpri/OneDrive/Documents/aryandp2/college_placement/project/clone/online-shopping-system"
+<Directory "C:/Users/pkpri/OneDrive/Documents/aryandp2/college_placement/project/clone/online-shopping-system">
+    AllowOverride All
+    Require all granted
+</Directory>
+Save httpd.conf and restart Apache in the XAMPP control panel.
+Now, visit:
+perl
+Copy code
+http://localhost/online-shopping-system
+Let me know if either solution works!
+
