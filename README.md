@@ -20,11 +20,11 @@ To run this project locally, you will need:
    - Start the Apache and MySQL services.
 
 2. **Clone or Download the Project**:
-   - Download the project from [GitHub - Online Shopping System](https://github.com/aryankumar109/online-shopping-system-with-advanced-admin-page).
+   - Download the project from [GitHub - Online Shopping System](https://github.com/aryankumar109/online-shopping-system).
    - Alternatively, clone the project:
      ```bash
      cd C:\xampp\htdocs\
-     git clone https://github.com/aryankumar109/online-shopping-system-with-advanced-admin-page.git
+     git clone https://github.com/aryankumar109/online-shopping-system.git
      ```
 
 3. **Set Up the Database**:
@@ -33,7 +33,7 @@ To run this project locally, you will need:
    - Select the database, go to **Import**, and upload the `onlineshop.sql` file from the project’s `database` directory.
 
 4. **Access the Application**:
-   - Go to [http://localhost/online-shopping-system-with-advanced-admin-page-master](http://localhost/online-shopping-system-with-advanced-admin-page-master) to view the app.
+   - Go to [http://localhost/online-shopping-system](http://localhost/online-shopping-system) to view the app.
    - Register as a new user to explore features.
 
 5. **Admin Login**:
@@ -50,8 +50,8 @@ To run this project locally, you will need:
 ### Alternate Setup Options
 If your project directory is outside `htdocs`, create an alias in Apache’s `httpd.conf`:
    ```apache
-   Alias /online-shopping-system "C:/Users/pkpri/OneDrive/Documents/aryandp2/college_placement/project/clone/online-shopping-system"
-   <Directory "C:/Users/pkpri/OneDrive/Documents/aryandp2/college_placement/project/clone/online-shopping-system">
+   Alias /online-shopping-system "C:/Users/pkpri/OneDrive/Documents/aryandp2/college_placement/project/online-shopping-system"
+   <Directory "C:/Users/pkpri/OneDrive/Documents/aryandp2/college_placement/project/online-shopping-system">
        AllowOverride All
        Require all granted
    </Directory>
